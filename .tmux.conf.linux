@@ -1,0 +1,46 @@
+# start numbering at 1
+set -g base-index 1
+
+# change the prefix key to C-n
+set -g prefix C-n
+unbind C-b
+bind C-n send-prefix
+
+# window naming using r and closing using d
+bind-key r command-prompt -I "#W" "rename-window '%%'"
+bind d kill-window
+unbind '&'
+unbind ','
+
+# split panes using s and v
+bind s split-window -h
+bind v split-window -v
+unbind '"'
+unbind %
+
+# pane navigation
+bind -r h select-pane -L  # move left
+bind -r j select-pane -D  # move down
+bind -r k select-pane -U  # move up
+bind -r l select-pane -R  # move right
+bind > swap-pane -D       # swap current pane with the next one
+bind < swap-pane -U       # swap current pane with the previous one
+
+# pane resizing
+bind -r H resize-pane -L 2
+bind -r J resize-pane -D 2
+bind -r K resize-pane -U 2
+bind -r L resize-pane -R 2
+
+# interaction with tmux
+set -s escape-time 10      # faster switch between vi modes
+set -g mouse on            # enable mouse mode
+set -g status-interval 5   # set status bar refresh time to 5 sec
+set -g bell-action none    # disable sound bell
+
+# presentation
+set -g renumber-windows on # renumber windows when a window is closed
+
+# theme
+set -g default-terminal "screen-256color"  # Setting the correct term
+source-file ~/.tmux/themes/tmux-tomorrow/tomorrow-night.tmux
