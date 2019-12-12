@@ -12,6 +12,9 @@ bind d kill-window
 unbind '&'
 unbind ','
 
+# disable auto renaming
+set allow-rename off
+
 # split panes using s and v
 bind s split-window -h
 bind v split-window -v
