@@ -19,7 +19,7 @@ unbind '"'
 unbind %
 
 # disable auto renaming
-set allow-rename off
+set-option -g allow-rename off
 
 # pane navigation
 bind -r h select-pane -L  # move left
