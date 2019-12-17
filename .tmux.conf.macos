@@ -43,7 +43,7 @@ set -g bell-action none    # disable sound bell
 
 # presentation
 set -g renumber-windows on                              # renumber windows when a window is closed
-set-option -sa terminal-overrides ',xterm-256color:RGB' # colors for SpaceVim
+set-option -sa terminal-overrides ',xterm-256color:RGB' # colors for SpaceVim with iTerm
 
 # theme
 set -g default-terminal "screen-256color"  # Setting the correct term
